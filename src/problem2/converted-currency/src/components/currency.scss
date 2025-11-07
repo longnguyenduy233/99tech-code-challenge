@@ -1,0 +1,36 @@
+input {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.label-control {
+  font-weight: 600;
+}
+.input-amount {
+  border: unset;
+  outline: unset;
+}
+.input-amount-container {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  .css-t3ipsp-control,
+  .css-13cymwt-control {
+    border: unset;
+    box-shadow: unset;
+  }
+}
+.input-amount-container:hover {
+  border: 1px solid #2684ff;
+}
+.input-amount-container:active,
+.input-amount-container:focus,
+.input-amount-container:focus-within,
+.input-amount-container:focus-visible {
+  /* border: 1px solid #2684ff; */
+  outline: 2px solid #2684ff;
+}
+.error {
+  text-align: left;
+  margin-top: 5px;
+  font-size: 13px;
+  color: red;
+}

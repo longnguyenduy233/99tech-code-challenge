@@ -1,0 +1,21 @@
+@use "sass:math";
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0
+    calc(
+      $size / $columns * (100% - (var(--column-gap) * (($columns / $size) - 1)))
+    );
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+  max-width: calc(
+    $size / $columns * (100% - (var(--column-gap) * (($columns / $size) - 1)))
+  );
+}
+@mixin make-grid-columns($columns: $grid-columns) {
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      @include make-col($i, $columns);
+    }
+  }
+}

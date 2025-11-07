@@ -1,0 +1,42 @@
+#root {
+  width: calc(100% / 3);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+}
+.spinner {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  opacity: 0.8;
+}
+
+.submit-button {
+  background-color: #9fe870;
+  border-color: #9fe870;
+}
+.submit-button:hover {
+  background-color: #80e142;
+  border-color: #80e142;
+}
+.submit-button:active,
+.submit-button:focus {
+  background-color: #65cf21;
+  border-color: #65cf21;
+}
+.swap-button-container {
+  padding: 10px 0;
+  .swap-button {
+    border-radius: 50%;
+    width: 45px;
+    rotate: 90deg;
+    height: 45px;
+  }
+}
