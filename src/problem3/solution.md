@@ -50,3 +50,18 @@ even can simplify it as `return rightPriority - leftPriority;`.
 
 1. We use incorrect array variable (`sortedBalances`) when compute rows array. We should use `formattedBalances` 
 instead.
+* Solution:
+```ts
+  const rows = formattedBalances.map((balance: FormattedWalletBalance, index: number) => {
+    const usdValue = prices[balance.currency] * balance.amount;
+    return (
+      <WalletRow 
+        className={classes.row}
+        key={index}
+        amount={balance.amount}
+        usdValue={usdValue}
+        formattedAmount={balance.formatted}
+      />
+    )
+  })
+```
